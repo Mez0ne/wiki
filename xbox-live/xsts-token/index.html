@@ -1,0 +1,490 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.1">
+    
+    
+      
+        <title>Xsts token - Xbox One Research Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3bd4f189.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#xbox-live-security-tokens-xsts-tokens" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Xbox One Research Wiki" class="md-header__button md-logo" aria-label="Xbox One Research Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Xbox One Research Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Xsts token
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Xbox One Research Wiki" class="md-nav__button md-logo" aria-label="Xbox One Research Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Xbox One Research Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#token-structure" class="md-nav__link">
+    Token structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Token structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content-encryption-key" class="md-nav__link">
+    Content Encryption Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initialization-vector" class="md-nav__link">
+    Initialization Vector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payload" class="md-nav__link">
+    Payload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication-tag" class="md-nav__link">
+    Authentication Tag
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inner-json-web-token" class="md-nav__link">
+    Inner JSON Web Token
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identities" class="md-nav__link">
+    Identities
+  </a>
+  
+    <nav class="md-nav" aria-label="Identities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#device-identity-xdi" class="md-nav__link">
+    Device identity (xdi)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#title-identity-xti" class="md-nav__link">
+    Title identity (xti)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-identity-xsi" class="md-nav__link">
+    Service identity (xsi)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-identityidentities-xui" class="md-nav__link">
+    User identity/identities (xui)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aggregate-identity-xai" class="md-nav__link">
+    Aggregate identity (xai)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-user-tokens" class="md-nav__link">
+    Multi-user tokens
+  </a>
+  
+    <nav class="md-nav" aria-label="Multi-user tokens">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disclaimer" class="md-nav__link">
+    Disclaimer:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<!-- TITLE: Xbox Live security tokens (XSTS tokens) -->
+<!-- SUBTITLE: Xbox Live uses security tokens are created by the Xbox Secure Token Service (XSTS) for authentication of users and devices. -->
+<h1 id="xbox-live-security-tokens-xsts-tokens">Xbox Live security tokens (XSTS tokens)</h1>
+<p>Xbox Live uses security tokens are created by the Xbox Secure Token Service (XSTS) for authentication of users and devices. XSTS tokens are also available for title use. Title XSTS tokens can be configured by developers and have varying contents depending on their intended audience.</p>
+<p>The token used for Xbox Live is a JSON Web Token (JWT) that uses two JWE encryption types:</p>
+<ul>
+<li>
+<p>Asymmetric public / private key pair (RFC 7519)
+ The token is encrypted using a certificate’s public key and is then decrypted on your service with the private key. The token is also digitally signed by Xbox Live to validate its origin. This is the recommended token type, as it is more secure.</p>
+</li>
+<li>
+<p>Asymmetric public / private key pair (legacy)
+ This token configuration does not adhere to RFC 7519. This option is only for titles migrated from the Xbox Developer Portal (XDP) and that require this format for compatibility purposes. This JWT format should not be used for new token configurations.</p>
+</li>
+</ul>
+<p>Partner Center Xbox Live configuration previously also included a Symmetric shared key option that used a shared key between Xbox Live and your service for encryption. This option was deprecated due to security concerns and is not available for new token configurations.</p>
+<p>Tokens are meant for a specific relying party, which represents a set of service endpoints that share the same token configuration, encryption certificate, and signature policy. These are described in more detail below:</p>
+<ul>
+<li>Token configuration: the claims that are in the token; token lifetime. </li>
+<li>Encryption certificate: the key used to encrypt the token. </li>
+<li>Signature policy: specifies which parts of the request (headers and body data) must be
+ signed for integrity validation.</li>
+</ul>
+<p>Xbox Live services use the same pre-configured relying party that is opaque to a title. Publishers that have their own services their titles call must configure a relying party via the Partner Center Xbox Live configuration.</p>
+<h2 id="token-structure">Token structure</h2>
+<p>The token is broken into sections including a Header and the Payload. There are other sections in the token depending on the encryption method for your token. Each part of the token is separated by a ‘.’ in the encoded token string.</p>
+<p><img alt="XSTS Token Structure" src="../xsts-token-structure.png" /></p>
+<p><code>Note: For Symmetric X-tokens, the format is similar but there is no Content Encryption Key or XBL Signature. The Payload is encrypted and decrypted directly with the symmetric shared secret key.</code></p>
+<h3 id="header">Header</h3>
+<p>The header has two sections:</p>
+<p>Details about how the JWT is encrypted and includes the encryption, algorithm, and content type. 
+The thumbprint of the x509 certificate used for encryption. 
+The thumbprint should match the certificate provided by you during configuration of your relying party and the private key must be installed on the server to enable the token to be decrypted.</p>
+<p>For deprecated symmetric X-tokens, the header only has the first section and the encryption algorithm is specified as “alg”: “dir”.</p>
+<h3 id="content-encryption-key">Content Encryption Key</h3>
+<p>With Asymmetric encryption the private key decrypts this content which then provides you the decryption key needed for the payload.</p>
+<p>Not present with deprecated symmetric encryption.</p>
+<h3 id="initialization-vector">Initialization Vector</h3>
+<p>Used with the AES decryptor for the payload.</p>
+<p>Not present with deprecated symmetric encryption.</p>
+<h3 id="payload">Payload</h3>
+<p>The payload is the encrypted JSON Web Token that contains the claims and information your server needs for authentication of the user.</p>
+<h3 id="authentication-tag">Authentication Tag</h3>
+<p>Integrity value for the token.</p>
+<h2 id="inner-json-web-token">Inner JSON Web Token</h2>
+<p>Once the Payload is decrypted you will have a UTF8 array that represents the RFC7516 JSON Web Token. This inner token also has a header that includes information related to generating and validating the signature on the token.</p>
+<p>The token will be signed with the private key of the Xbox Live signing certificate to validate that the token is from Xbox Live. The header of the inner token contains the thumbprint and a URL to download the public key of the cert so that your service can do a validation of the signature. This means that your server should keep a cache of this public cert that it downloaded at runtime to re-use.</p>
+<p>Since the Xbox Live signing cert can expire and needs to be renewed every 18 months, we recommend that your server not hard code the cert nor install it on your servers. You should always check your local cache, if you do not have the cert, download it (validating it is coming from https://xsts.xboxlive.com), and then cache it. If the cert is updated, the tokens will have a new thumbprint and URL in their headers to reflect that. If you follow the logic outlined in the Game Service sample, available for download on XGD Fast Downloads, the signature cert management your service will never have to be updated to handle a new Xbox Live signing cert.</p>
+<p>The payload of this token contains the claims that were specified during the token configuration for the relying party. Claims that are not configured are not included in the token payload. Claim values can be traditional types (string, integer, GUID, and so on.). They can also be a JSON object representing a more complex structure.</p>
+<p>Note: Claim values with no data can be represented through null values or can be missing from the token entirely. Title services should consider this when parsing claim values.</p>
+<h2 id="identities">Identities</h2>
+<p>A set of related claims that describe aspects of a principal are known as an identity. From a structural perspective, they are claims where the value is a JSON object. That object will either be a set of claims or an array of sets of claims.</p>
+<p>The identities that can be contained in Xbox One tokens are listed and described below (with their specific short names shown in parenthesis):</p>
+<h3 id="device-identity-xdi">Device identity (xdi)</h3>
+<p>The claims in the device identity provide details about the device that requested the token. There can be only one device identity in the token. This means that the device identity will be a simple list of claims and values.</p>
+<h3 id="title-identity-xti">Title identity (xti)</h3>
+<p>The claims in the title identity provide details about the title running on Xbox One that requested the token. The token can contain only one title identity. If present in the token, the title identity will be a simple list of claims and values.</p>
+<h3 id="service-identity-xsi">Service identity (xsi)</h3>
+<p>The claims in the service identity provide details about a service if the request came from that service instead of from Xbox One. There can be only one service identity in the token. If present, the service identity will be a simple list of claims and values.</p>
+<h3 id="user-identityidentities-xui">User identity/identities (xui)</h3>
+<p>The claims in the user identity provide details about a user. If more than one user is logged in to the console, there will be more than one user identity in the token. If present, the user identity will be an array of claims sets (even if it is an array with one object).</p>
+<p>The authorization header of the request contains the necessary information to determine which user in the token the request applies to. For additional information about processing tokens with multiple users, see Multi-user tokens below.</p>
+<h3 id="aggregate-identity-xai">Aggregate identity (xai)</h3>
+<p>The claims in the aggregate identity provide a merged set of values representing all of the users in the token, such as age group (the value matches that of the youngest user) and privileges. Combining these as a separate identity enables the service to make decisions without having to perform the analysis directly, and it ensures that privileges blocked by banning are enforced, something that the service cracking the token wouldn’t be able to determine easily.</p>
+<h3 id="multi-user-tokens">Multi-user tokens</h3>
+<p>For Xbox One, tokens will contain user identities for any user that is currently signed into the console. This means that the xui claim in the token will be an array containing one or more user objects. In the incoming request, the authorization header will contain the following:</p>
+<p><code>XBL3.0 x=&lt;user hash&gt;;&lt;token&gt;</code></p>
+<p>The user hash value will be one of three values:</p>
+<p>A number that matches the user hash claim of one of the user identities in the token  indicating that the request is for that specific user. </p>
+<p>An asterisk (*), indicating that the request is for all users contained within the token. 
+A hyphen (-), indicating that the request is not in the context of any of the users in the token. </p>
+<p>If the user hash value in the header matches the user/hash claim of one of the user identities in the token, the request is meant for only that user. User hash values are unique to that instance but are not guaranteed to always be the same for a given user in future XSTS tokens. They should not be used as a permanent identifier or cached.</p>
+<h6 id="disclaimer">Disclaimer:</h6>
+<p>This information was gathered from a publicly accessible Game Development Kit and files dumped from a UWA devkit.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
+      
+    
+  </body>
+</html>

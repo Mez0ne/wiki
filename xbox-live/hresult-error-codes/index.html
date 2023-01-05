@@ -1,0 +1,856 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.1">
+    
+    
+      
+        <title>Hresult error codes - Xbox One Research Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3bd4f189.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#global" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Xbox One Research Wiki" class="md-header__button md-logo" aria-label="Xbox One Research Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Xbox One Research Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Hresult error codes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Xbox One Research Wiki" class="md-nav__button md-logo" aria-label="Xbox One Research Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Xbox One Research Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#global" class="md-nav__link">
+    Global
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http-client" class="md-nav__link">
+    HTTP Client
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xal" class="md-nav__link">
+    XAL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xal-gsdk" class="md-nav__link">
+    XAL GSDK
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xsapi" class="md-nav__link">
+    XSAPI
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Hresult error codes</h1>
+
+<!-- TITLE: Xbox Live HRESULT Error Codes -->
+<!-- SUBTITLE: A list of all the HRESULT error codes used by Xbox Live. -->
+
+<h2 id="global">Global</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Hex</th>
+<th>Decimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S_OK</td>
+<td>0x00000000</td>
+<td>0</td>
+</tr>
+<tr>
+<td>E_NOTIMPL</td>
+<td>0x80004001</td>
+<td>-2147467263</td>
+</tr>
+<tr>
+<td>E_OUTOFMEMORY</td>
+<td>0x8007000E</td>
+<td>-2147024882</td>
+</tr>
+<tr>
+<td>E_INVALIDARG</td>
+<td>0x80070057</td>
+<td>-2147024809</td>
+</tr>
+<tr>
+<td>E_ABORT</td>
+<td>0x80004004</td>
+<td>-2147467260</td>
+</tr>
+<tr>
+<td>E_FAIL</td>
+<td>0x80004005</td>
+<td>-2147467259</td>
+</tr>
+<tr>
+<td>E_ACCESSDENIED</td>
+<td>0x80070005</td>
+<td>-2147024891</td>
+</tr>
+<tr>
+<td>E_PENDING</td>
+<td>0x8000000A</td>
+<td>-2147483638</td>
+</tr>
+<tr>
+<td>E_UNEXPECTED</td>
+<td>0x8000FFFF</td>
+<td>-2147418113</td>
+</tr>
+<tr>
+<td>E_POINTER</td>
+<td>0x80004003</td>
+<td>-2147467261</td>
+</tr>
+<tr>
+<td>E_TIME_CRITICAL_THREAD</td>
+<td>0x800701A0</td>
+<td>-2147024480</td>
+</tr>
+<tr>
+<td>E_NO_TASK_QUEUE</td>
+<td>0x800701AB</td>
+<td>-2147024469</td>
+</tr>
+<tr>
+<td>E_NOT_SUPPORTED</td>
+<td>0x80070032</td>
+<td>-2147024846</td>
+</tr>
+<tr>
+<td>E_NOT_SUFFICIENT_BUFFER</td>
+<td>0x8007007A</td>
+<td>-2147024774</td>
+</tr>
+<tr>
+<td>E_NOINTERFACE</td>
+<td>0x80004002</td>
+<td>-2147467262</td>
+</tr>
+<tr>
+<td>E_BOUNDS</td>
+<td>0x8000000B</td>
+<td>-2147483637</td>
+</tr>
+</tbody>
+</table>
+<h2 id="http-client">HTTP Client</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Hex</th>
+<th>Decimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTTP_E_STATUS_AMBIGUOUS</td>
+<td>0x8019012C</td>
+<td>-2145844948</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_BAD_GATEWAY</td>
+<td>0x801901F6</td>
+<td>-2145844746</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_BAD_METHOD</td>
+<td>0x80190195</td>
+<td>-2145844843</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_BAD_REQUEST</td>
+<td>0x80190190</td>
+<td>-2145844848</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_CONFLICT</td>
+<td>0x80190199</td>
+<td>-2145844839</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_DENIED</td>
+<td>0x80190191</td>
+<td>-2145844847</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_EXPECTATION_FAILED</td>
+<td>0x801901A1</td>
+<td>-2145844831</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_FORBIDDEN</td>
+<td>0x80190193</td>
+<td>-2145844845</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_GATEWAY_TIMEOUT</td>
+<td>0x801901F8</td>
+<td>-2145844744</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_GONE</td>
+<td>0x8019019A</td>
+<td>-2145844838</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_LENGTH_REQUIRED</td>
+<td>0x8019019B</td>
+<td>-2145844837</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_MOVED</td>
+<td>0x8019012D</td>
+<td>-2145844947</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_NONE_ACCEPTABLE</td>
+<td>0x80190196</td>
+<td>-2145844842</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_NOT_FOUND</td>
+<td>0x80190194</td>
+<td>-2145844844</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_NOT_MODIFIED</td>
+<td>0x80190130</td>
+<td>-2145844944</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_NOT_SUPPORTED</td>
+<td>0x801901F5</td>
+<td>-2145844747</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_PAYMENT_REQ</td>
+<td>0x80190192</td>
+<td>-2145844846</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_PRECOND_FAILED</td>
+<td>0x8019019C</td>
+<td>-2145844836</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_PROXY_AUTH_REQ</td>
+<td>0x80190197</td>
+<td>-2145844841</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_RANGE_NOT_SATISFIABLE</td>
+<td>0x801901A0</td>
+<td>-2145844832</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_REDIRECT</td>
+<td>0x8019012E</td>
+<td>-2145844946</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_REDIRECT_KEEP_VERB</td>
+<td>0x80190133</td>
+<td>-2145844941</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_REDIRECT_METHOD</td>
+<td>0x8019012F</td>
+<td>-2145844945</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_REQUEST_TIMEOUT</td>
+<td>0x80190198</td>
+<td>-2145844840</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_REQUEST_TOO_LARGE</td>
+<td>0x8019019D</td>
+<td>-2145844835</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_SERVER_ERROR</td>
+<td>0x801901F4</td>
+<td>-2145844748</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_SERVICE_UNAVAIL</td>
+<td>0x801901F7</td>
+<td>-2145844745</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_UNEXPECTED</td>
+<td>0x80190001</td>
+<td>-2145845247</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_UNEXPECTED_SERVER_ERROR</td>
+<td>0x80190005</td>
+<td>-2145845243</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_UNSUPPORTED_MEDIA</td>
+<td>0x8019019F</td>
+<td>-2145844833</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_URI_TOO_LONG</td>
+<td>0x8019019E</td>
+<td>-2145844834</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_USE_PROXY</td>
+<td>0x80190131</td>
+<td>-2145844943</td>
+</tr>
+<tr>
+<td>HTTP_E_STATUS_VERSION_NOT_SUP</td>
+<td>0x801901F9</td>
+<td>-2145844743</td>
+</tr>
+<tr>
+<td>ONL_E_ACTION_REQUIRED</td>
+<td>0x8086000C</td>
+<td>-2138701812</td>
+</tr>
+<tr>
+<td>WEB_E_INVALID_JSON_STRING</td>
+<td>0x83750007</td>
+<td>-2089484281</td>
+</tr>
+<tr>
+<td>WEB_E_UNEXPECTED_CONTENT</td>
+<td>0x83750005</td>
+<td>-2089484283</td>
+</tr>
+<tr>
+<td>E_HC_NOT_INITIALISED</td>
+<td>0x89235001</td>
+<td>-1994174463</td>
+</tr>
+<tr>
+<td>E_HC_PERFORM_ALREADY_CALLED</td>
+<td>0x89235003</td>
+<td>-1994174461</td>
+</tr>
+<tr>
+<td>E_HC_ALREADY_INITIALISED</td>
+<td>0x89235004</td>
+<td>-1994174460</td>
+</tr>
+<tr>
+<td>E_HC_CONNECT_ALREADY_CALLED</td>
+<td>0x89235005</td>
+<td>-1994174459</td>
+</tr>
+<tr>
+<td>E_HC_NO_NETWORK</td>
+<td>0x89235006</td>
+<td>-1994174458</td>
+</tr>
+</tbody>
+</table>
+<h2 id="xal">XAL</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Hex</th>
+<th>Decimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_XAL_NOTINITIALIZED</td>
+<td>0x89235001</td>
+<td>-1994174463</td>
+</tr>
+<tr>
+<td>E_XAL_ALREADYINITIALIZED</td>
+<td>0x89235101</td>
+<td>-1994174207</td>
+</tr>
+<tr>
+<td>E_XAL_USERSETNOTEMPTY</td>
+<td>0x89235102</td>
+<td>-1994174206</td>
+</tr>
+<tr>
+<td>E_XAL_USERSETFULL</td>
+<td>0x89235103</td>
+<td>-1994174205</td>
+</tr>
+<tr>
+<td>E_XAL_USERSIGNEDOUT</td>
+<td>0x89235104</td>
+<td>-1994174204</td>
+</tr>
+<tr>
+<td>E_XAL_DUPLICATEDUSER</td>
+<td>0x89235105</td>
+<td>-1994174203</td>
+</tr>
+<tr>
+<td>E_XAL_NETWORK</td>
+<td>0x89235106</td>
+<td>-1994174202</td>
+</tr>
+<tr>
+<td>E_XAL_CLIENTERROR</td>
+<td>0x89235107</td>
+<td>-1994174201</td>
+</tr>
+<tr>
+<td>E_XAL_UIREQUIRED</td>
+<td>0x89235108</td>
+<td>-1994174200</td>
+</tr>
+<tr>
+<td>E_XAL_HANDLERALREADYREGISTERED</td>
+<td>0x89235109</td>
+<td>-1994174199</td>
+</tr>
+<tr>
+<td>E_XAL_UNEXPECTEDUSERSIGNEDIN</td>
+<td>0x8923510A</td>
+<td>-1994174198</td>
+</tr>
+<tr>
+<td>E_XAL_NOTATTACHEDTOJVM</td>
+<td>0x8923510B</td>
+<td>-1994174197</td>
+</tr>
+<tr>
+<td>E_XAL_DEVICEUSER</td>
+<td>0x8923510C</td>
+<td>-1994174196</td>
+</tr>
+<tr>
+<td>E_XAL_DEFERRALNOTAVAILABLE</td>
+<td>0x8923510D</td>
+<td>-1994174195</td>
+</tr>
+<tr>
+<td>E_XAL_MISSINGPLATFORMEVENTHANDLER</td>
+<td>0x8923510E</td>
+<td>-1994174194</td>
+</tr>
+<tr>
+<td>E_XAL_USERNOTFOUND</td>
+<td>0x8923510F</td>
+<td>-1994174193</td>
+</tr>
+<tr>
+<td>E_XAL_NOTOKENREQUIRED</td>
+<td>0x89235110</td>
+<td>-1994174192</td>
+</tr>
+<tr>
+<td>E_XAL_NODEFAULTUSER</td>
+<td>0x89235111</td>
+<td>-1994174191</td>
+</tr>
+<tr>
+<td>E_XAL_FAILEDTORESOLVE</td>
+<td>0x89235112</td>
+<td>-1994174190</td>
+</tr>
+</tbody>
+</table>
+<h2 id="xal-gsdk">XAL GSDK</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Hex</th>
+<th>Decimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_XAL_USERSETFULL</td>
+<td>0x89245100</td>
+<td>-1994108672</td>
+</tr>
+<tr>
+<td>E_XAL_USERSIGNEDOUT</td>
+<td>0x89245101</td>
+<td>-1994108671</td>
+</tr>
+<tr>
+<td>E_XAL_UIREQUIRED</td>
+<td>0x89245102</td>
+<td>-1994108670</td>
+</tr>
+<tr>
+<td>E_XAL_DEFERRALNOTAVAILABLE</td>
+<td>0x89245103</td>
+<td>-1994108669</td>
+</tr>
+<tr>
+<td>E_XAL_USERNOTFOUND</td>
+<td>0x89245104</td>
+<td>-1994108668</td>
+</tr>
+<tr>
+<td>E_XAL_NOTOKENREQUIRED</td>
+<td>0x89245105</td>
+<td>-1994108667</td>
+</tr>
+<tr>
+<td>E_XAL_NODEFAULTUSER</td>
+<td>0x89245106</td>
+<td>-1994108666</td>
+</tr>
+<tr>
+<td>E_XAL_FAILEDTORESOLVE</td>
+<td>0x89245107</td>
+<td>-1994108665</td>
+</tr>
+</tbody>
+</table>
+<h2 id="xsapi">XSAPI</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Hex</th>
+<th>Decimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_XBL_RUNTIME_ERROR</td>
+<td>0x89235200</td>
+<td>-1994173952</td>
+</tr>
+<tr>
+<td>E_XBL_RTA_GENERIC_ERROR</td>
+<td>0x89235201</td>
+<td>-1994173951</td>
+</tr>
+<tr>
+<td>E_XBL_RTA_SUBSCRIPTION_LIMIT_REACHED</td>
+<td>0x89235202</td>
+<td>-1994173950</td>
+</tr>
+<tr>
+<td>E_XBL_RTA_ACCESS_DENIED</td>
+<td>0x89235203</td>
+<td>-1994173949</td>
+</tr>
+<tr>
+<td>E_XBL_AUTH_UNKNOWN_ERROR</td>
+<td>0x89235204</td>
+<td>-1994173948</td>
+</tr>
+<tr>
+<td>E_XBL_AUTH_RUNTIME_ERROR</td>
+<td>0x89235205</td>
+<td>-1994173947</td>
+</tr>
+<tr>
+<td>E_XBL_AUTH_NO_TOKEN</td>
+<td>0x89235206</td>
+<td>-1994173946</td>
+</tr>
+<tr>
+<td>E_XBL_ALREADY_INITIALIZED</td>
+<td>0x89235207</td>
+<td>-1994173945</td>
+</tr>
+<tr>
+<td>E_XBL_NOT_INITIALIZED</td>
+<td>0x89235208</td>
+<td>-1994173944</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
+      
+    
+  </body>
+</html>

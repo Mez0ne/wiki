@@ -1,0 +1,601 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.1">
+    
+    
+      
+        <title>XCRDutil - Xbox One Research Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3bd4f189.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#xcrdutil" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Xbox One Research Wiki" class="md-header__button md-logo" aria-label="Xbox One Research Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Xbox One Research Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              XCRDutil
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Xbox One Research Wiki" class="md-nav__button md-logo" aria-label="Xbox One Research Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Xbox One Research Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#accepted-paths" class="md-nav__link">
+    Accepted paths
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xcrd-paths" class="md-nav__link">
+    XCRD paths
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-codes" class="md-nav__link">
+    Error Codes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="xcrdutil">XCRDutil</h1>
+<p>Manage mounting of XVD/XVC files in HostOS, from SystemOS.</p>
+<p>Xcrdutil can be used to get info about XVD files (and other formats) as well as mount and create XVD files with some limitations. Via the UWP sandbox, two different XVD files can be mounted, "Updater.xvd" and "SystemTools.xvd".</p>
+<p>The tool is located at <code>C:\Windows\System32\xcrdutil.exe</code></p>
+<h2 id="accepted-paths">Accepted paths</h2>
+<p>XCRDutil allows specifying remote paths, in HostOS, via two notations:
+- XCRD paths (see below, e.g. <code>[XUC:]\package.xvd</code> for <strong>User Content</strong> partition in HostOS). These paths are an abstraction to the HostOS filesystem, allowing to refer to .xvd's without knowing their exact location, and possibly also allowing for security / permission checks.
+- Global paths (e.g. <code>\??\F:\</code> for <strong>F:</strong> / <a href="../xbox-boot-file-system">XBFS</a> drive in HostOS). These refer to a physical volume (like a disk partition, the flash, etc) in HostOS.</p>
+<p>Not all the options/arguments for XCRDUtil expect the same format for the paths. Some options are able to work with paths pointing to the SystemOS's filesystem, while others may only work with remote paths to HostOS, in either one of the two types just specified previously:
+*  XCRD paths.
+* "global" paths pointing to a HostOS volume, which start with the non-standard "\??\" prefix</p>
+<p>Following is a table describing what options XCRDUtil has, and kind of path each option expects. Examples are provided at the end of the page:
+| Option | Option description  | Arg1 Path type | Arg2 Path type 
+|-------------|----------|-------------|-------------
+| write_blob  | Writes the contents of an .xvd (from a SystemOS path) to an .xvd in the HostOS's filesystem, represented by a XCRD path  | XCRD | SystemOS
+| read_blob   | reads one .xvd (from a HostOS XCRD path) and writes it to SystemOS's filesystem.  | XCRD | SystemOS
+| QueryInfo   | Gives information about an XVD (either mounted or unmounted) accesible to HostOS | Global HostOS path / XCRD | N/A</p>
+<p>To be completed.</p>
+<h2 id="xcrd-paths">XCRD paths</h2>
+<table>
+<thead>
+<tr>
+<th>XCRD Id</th>
+<th>XCRD Path</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>[XTE:]</td>
+<td>HDD Temp</td>
+</tr>
+<tr>
+<td>1</td>
+<td>[XUC:]</td>
+<td>HDD User Content</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[XSS:]</td>
+<td>HDD System Support</td>
+</tr>
+<tr>
+<td>3</td>
+<td>[XSU:]</td>
+<td>HDD System Image</td>
+</tr>
+<tr>
+<td>4</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>5</td>
+<td>[XFG:]</td>
+<td>HDD Future Growth</td>
+</tr>
+<tr>
+<td>6</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>7</td>
+<td>[XTF:]</td>
+<td>XTF Remote storage</td>
+</tr>
+<tr>
+<td>8</td>
+<td>[XBL:]</td>
+<td>Xbox Live storage</td>
+</tr>
+<tr>
+<td>9</td>
+<td>[XOD:]</td>
+<td>XODD (System VM)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>[XVE:]</td>
+<td>Used for so-called "paths to embedded XVDs"</td>
+</tr>
+<tr>
+<td>11</td>
+<td>[XT0:]</td>
+<td>USB Transfer Storage</td>
+</tr>
+<tr>
+<td>12</td>
+<td>[XT1:]</td>
+<td>USB Transfer Storage</td>
+</tr>
+<tr>
+<td>13</td>
+<td>[XT2:]</td>
+<td>USB Transfer Storage</td>
+</tr>
+<tr>
+<td>14</td>
+<td>[XT3:]</td>
+<td>USB Transfer Storage</td>
+</tr>
+<tr>
+<td>15</td>
+<td>[XT4:]</td>
+<td>USB Transfer Storage</td>
+</tr>
+<tr>
+<td>16</td>
+<td>[XT5:]</td>
+<td>USB Transfer Storage</td>
+</tr>
+<tr>
+<td>17</td>
+<td>[XT6:]</td>
+<td>USB Transfer Storage</td>
+</tr>
+<tr>
+<td>18</td>
+<td>[XT7:]</td>
+<td>USB Transfer Storage</td>
+</tr>
+<tr>
+<td>19</td>
+<td>[XE0:]</td>
+<td>USB External Storage</td>
+</tr>
+<tr>
+<td>20</td>
+<td>[XE1:]</td>
+<td>USB External Storage</td>
+</tr>
+<tr>
+<td>21</td>
+<td>[XE2:]</td>
+<td>USB External Storage</td>
+</tr>
+<tr>
+<td>22</td>
+<td>[XE3:]</td>
+<td>USB External Storage</td>
+</tr>
+<tr>
+<td>23</td>
+<td>[XE4:]</td>
+<td>USB External Storage</td>
+</tr>
+<tr>
+<td>24</td>
+<td>[XE5:]</td>
+<td>USB External Storage</td>
+</tr>
+<tr>
+<td>25</td>
+<td>[XE6:]</td>
+<td>USB External Storage</td>
+</tr>
+<tr>
+<td>26</td>
+<td>[XE7:]</td>
+<td>USB External Storage</td>
+</tr>
+<tr>
+<td>27</td>
+<td>[XBX:]</td>
+<td>XBOX (Copy-Over-LAN)</td>
+</tr>
+<tr>
+<td>28</td>
+<td>[XSR:]</td>
+<td>SRA (local or SMB)</td>
+</tr>
+<tr>
+<td>29</td>
+<td>[XFA:]</td>
+<td>Unknown</td>
+</tr>
+<tr>
+<td>30</td>
+<td>[XAS:]</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>31</td>
+<td>[XRT:]</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>32</td>
+<td>[XRU:]</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>33</td>
+<td>[XRS:]</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>34</td>
+<td>[XRI:]</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h2 id="examples">Examples</h2>
+<p>Create new XCRD Path in the HDD Temp partition</p>
+<pre><code>xcrdutil -bxp 0 mytestpath
+</code></pre>
+<p>Outputs something like:</p>
+<pre><code>Successfully built XCRD Path: [XTE:]\mytestpath
+Command completed successfully.
+</code></pre>
+<p>So called "paths to embedded XVDs" can also be created</p>
+<pre><code>xcrdutil -bxp 0 mytestembeddedpath -exvd_path
+</code></pre>
+<p>Outputs something like:</p>
+<pre><code>Successfully built XCRD Path: [XVE:]\[XTE:]\mytestembeddedpath
+Command completed successfully.
+</code></pre>
+<p>Mount package</p>
+<pre><code>xcrdutil -m [XUC:]\targetPackage.xvd
+</code></pre>
+<p>Outputs something like:</p>
+<pre><code>Successfully mounted [XUC:]\targetPackage.xvd
+Device Path : \\?\GLOBALROOT\Device\Harddisk21\Partition1
+Command completed successfully.
+</code></pre>
+<p>Mounted XVD's can be accessed with junctions:</p>
+<pre><code>mklink /j D:\Folder \\?\GLOBALROOT\Device\Harddisk17\Partition1\
+</code></pre>
+<p>Query Info for given XVD:</p>
+<pre><code>xcrdutil -QueryInfo \??\F:\host.xvd 5
+</code></pre>
+<p>Write file to Host layer</p>
+<pre><code>xcrdutil -write_blob [XUC:]\targetPackage.xvd D:\DevelopmentFiles\localPackage.xvd
+</code></pre>
+<p>Read file from Host layer</p>
+<pre><code>xcrdutil -read_blob [XUC:]\targetPackage.xvd D:\DevelopmentFiles\localPackage.xvd
+</code></pre>
+<p>Delete file on Host layer</p>
+<pre><code>xcrdutil -delete_blob [XUC:]\targetPackage.xvd
+</code></pre>
+<h2 id="error-codes">Error Codes</h2>
+<table>
+<thead>
+<tr>
+<th>Error Number</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>How to obtain it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x80070002</td>
+<td>File/path not found</td>
+<td>This error appears whenever an invalid path to a file is used (either XCRD, native \??\ path, or SystemOS path).</td>
+<td><code>xcrdutil -m [XUC:]\idontexist.xvd</code></td>
+</tr>
+<tr>
+<td>0x80070570</td>
+<td>Possible permission error</td>
+<td>This error appears when an operation is denied due to insufficient permissions. Examples include trying to mount host.xvd.</td>
+<td><code>xcrdutil -m \??\F:\host.xvd</code> or <code>xcrdutil -QueryInfo \??\F:\host.xvd 3</code></td>
+</tr>
+<tr>
+<td>0x8007048F</td>
+<td>Path not found</td>
+<td>This error appears when trying to create/access a file in a XCRD path that does not exist.</td>
+<td><code>xcrdutil -c [XE0:]\someinvalidpath</code></td>
+</tr>
+<tr>
+<td>0x80070032</td>
+<td>Unknown</td>
+<td>Possibly meaning the passed XVD does not have region information</td>
+<td><code>xcrdutil -Specifiers [XUC:]\someXvdYouveMounted</code></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
+      
+    
+  </body>
+</html>
